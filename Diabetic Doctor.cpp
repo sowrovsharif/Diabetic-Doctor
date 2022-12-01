@@ -8,6 +8,7 @@
 using namespace std;
 
 void welcome_screen();
+void getvalue();
 
 int main()
 	{
@@ -40,4 +41,38 @@ void welcome_screen()
 	   getch();
 	   return;
 	}
+
+void getvalue()
+	{
+    system("cls");
+    string name,sex;
+    int age,wt,ht,id;
+    fstream file;
+
+	 printf(" P E R S O N A L   I N F O R M A T I O N\n");
+	 printf("I D        : ");
+     cin>>id;
+     cout<<endl;
+	 printf("N A M E        : ");
+     cin>>name;
+     cout<<endl;
+     printf("A G E          : ");
+     cin>>age;
+     cout<<endl;
+	 printf("W E I G H T    : ");
+     cin>>wt;
+     cout<<endl;
+	 printf("H E I G H T    : ");
+     cin>>ht;
+     cout<<endl;
+	 printf("S E X (M/F)    : ");
+     cin>>sex;
+     cout<<endl;
+     file.open("D://patientlist.txt",ios::out | ios::app);
+     file << " " << id << " "<< name << " " << wt<< " " << sex << "\n";
+	 file.close();
+	 getch();
+	 return;
+	}
+
 
