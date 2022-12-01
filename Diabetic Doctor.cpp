@@ -9,6 +9,7 @@ using namespace std;
 
 void welcome_screen();
 void getvalue();
+void diagnosis();
 
 int main()
 	{
@@ -74,5 +75,18 @@ void getvalue()
 	 getch();
 	 return;
 	}
+void diagnosis(void)
+     {
+     //system("cls");
 
+     printf("\t\t\t\t **  D I A G N O S I S   W I N D O W **   ");
+     cout<<"\n\n\n";
+     printf(" \t\t\t\tLet's have alook at  symptoms.........");
+     cout<<"\n\n\n";
+     printf(" \t\t\t\tPlease enter the form in next page .");
+     cout<<"\n\n\n\n\n\n\t\t\t ";
+
+     printf("\t\t***** PRESS ANY KEY ***** ");
+     getch();
+     }
 
