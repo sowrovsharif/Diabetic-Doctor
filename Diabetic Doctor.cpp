@@ -434,4 +434,35 @@ int option_one(){
 	  }
 	 }
 }
+void show_record()
+{
+	system("cls");
+	fstream file;
+	string name,sex;
+    int wt,id;
+	cout << "\n\n\t\t\t\t\tAll Patient Reports";
 
+	// Open the file in input mode
+	file.open("D://patientlist.txt", ios::in);
+	if (!file)
+		cout << "\n\nFile Opening Error!";
+	else {
+
+		cout << "\n\n\nID\t\tName"<< "\t\tWeight\t\tGender\n\n";
+		file >> id >> name;
+		file >> wt >> sex;
+
+		// Till end of file is reached
+		while (!file.eof()) {
+
+			cout << " " << id<< "\t\t" << name<< "\t\t" << wt<< "\t\t" << sex<< "\n\n";
+			file >> id >> name;
+			file >> wt >> sex;
+		}
+
+		system("pause");
+
+		// Close the file
+		file.close();
+	}
+}
