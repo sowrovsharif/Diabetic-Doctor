@@ -254,4 +254,35 @@ void getlevel3_symptoms()
 		 ++k;
 		 return;
 	}
+char display_message(int n,int m)
+
+      {
+       char ch;
+       system("cls");
+       switch(n)
+	 {
+	  case 1:
+		  switch(m);
+		      {
+		       case 0:
+			       printf("THE PERSON IS NOT DIABETIC\n");
+
+			       printf("PRESS ANY KEY TO QUIT." );
+			      // gotoxy(70,20);
+			       //cin>>ch;
+			       //break;
+			       exit(0);
+
+		       case -1:
+
+
+			       printf("THE PERSON IS DIABETIC \n");
+
+			       printf("PROCEED (Y/N)  ?");
+
+			       cin>>ch;
+			       break;
+
+		     //  default: break;
+		      }
 
