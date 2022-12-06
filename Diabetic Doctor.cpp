@@ -101,4 +101,81 @@ void diagnosis(void)
      printf("\t\t***** PRESS ANY KEY ***** ");
      getch();
      }
+void getlevel1_symptoms(void)
+    {
+        //char s[10];
+     system("cls");
+     int i=0;
 
+     printf( "\t\t\t *** MEDICAL DIAGONOSIS FORM *** \n\n\n\n\n");
+
+     printf("\t\tAPPETITE (H(HIGH),/L(LOW),/N(NORMAL): ") ;
+
+     cin>>s[i];
+     s[i]=toupper(s[i]);
+     ++i;
+     cout<<endl;
+
+     printf("\t\tFREQUENCY OF THIRST(H(HIGH),/L(LOW)/N(NORMAL): ");
+
+     cin>>s[i];
+     s[i]=toupper(s[i]);
+     ++i;
+     cout<<endl;
+
+     printf("\t\tFREQUENCY OF URINATION(H(HIGH),/L(LOW),/N(NORMAL): ");
+
+     cin>>s[i];
+     s[i]=toupper(s[i]);
+     ++i;
+     cout<<endl;
+
+     printf("\t\tVISION (I(IMPAIRMENT),/N(NORMAL) : ");
+
+     cin>>s[i];
+     s[i]=toupper(s[i]);
+     ++i;
+     cout<<endl;
+
+     printf("\t\tURINE SUGAR(P(PASSIVE)/A(ACTIVE) : ");
+
+     cin>>s[i];
+     s[i]=toupper(s[i]);
+     ++i;
+     cout<<endl;
+
+     printf("\t\tKETONUREA(P(PASSIVE)/A(ACTIVE) : ");
+
+     cin>>s[i];
+     s[i]=toupper(s[i]);
+     ++i;
+     cout<<endl;
+
+     printf("\t\tFASTING BLOOD SUGAR(H(HIGH)/L(LOW)/N(NOMAL) : ");
+
+     cin>>s[i];
+     s[i]=toupper(s[i]);
+     ++i;
+     cout<<endl;
+
+     printf("\t\tR B S (H(HIGH)/L(LOW)/N(NORMAL) : ");
+
+     cin>>s[i];
+     s[i]=toupper(s[i]);
+     ++i;
+     cout<<endl;
+
+     printf("\t\tFAMILY HISTORY OF DIABETES(P(PASSIVE)/A(ACTIVE) : ");
+
+     cin>>s[i];
+     s[i]=toupper(s[i]);
+     ++i;
+     cout<<endl;
+
+     printf("\t\tOGTT(D/N) : ");
+
+     cin>>s[i];
+     s[i]=toupper(s[i]);
+     ++i;
+
+    }
