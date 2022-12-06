@@ -179,3 +179,48 @@ void getlevel1_symptoms(void)
      ++i;
 
     }
+
+void getlevel2_symptoms()
+	       {
+
+		system("cls");
+		int j=0;
+		//char s[7];
+ 		  printf("PANCREATITIS(P/A)  : ");
+ 		  cin>>s[j];
+		  s[j]=toupper(s[j]);
+		  j++;
+		  printf("\n");
+ 		  printf("CARCINOMA(P/A)  : ");
+ 		  cin>>s[j];
+		  s[j]=toupper(s[j]);
+		  ++j;
+		  printf("\n");
+ 		  printf("CIRHHOSIS(P/A)     : ");
+ 		  cin>>s[j];
+		  s[j]=toupper(s[j]);
+		  ++j;
+		  printf("\n");
+ 		  printf(" HCTS  (H/L/N)     : ");
+ 		  cin>>s[j];
+		  s[j]=toupper(s[j]);
+		  ++j;
+		  printf("\n");
+ 		  printf("HEPATITIS(P/A)    : ");
+ 		  cin>>s[j];
+		  s[j]=toupper(s[j]);
+		  ++j;
+		  printf("\n");
+ 		  printf(" HORMONAL DISORDER(P/A): ");
+ 		  cin>>s[j];
+		  s[j]=toupper(s[j]);
+		  ++j;
+		  printf("\n");
+ 		  printf(" PANCREATECTOMY(P/A) : ");
+ 		  cin>>s[j];
+		  s[j]=toupper(s[j]);
+		  ++j;
+		  printf("\n");
+		  return;
+	      }
+
