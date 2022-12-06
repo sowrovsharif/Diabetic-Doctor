@@ -223,4 +223,35 @@ void getlevel2_symptoms()
 		  printf("\n");
 		  return;
 	      }
+void getlevel3_symptoms()
+	     {
+	      char   s[5];
+		 int k=0;
+		 system("cls");
+ 		 printf("AGE(young(Y)/Middle aged(M)/Elderly(E)) : ");
+ 		 cin>>s[k];
+		 s[k]= toupper (s[k]);
+		 ++k;
+		 printf("\n");
+ 		 printf("BODY WEIGHT(normal(N)/Above normal(A)/Below normal(B)/obese) : ");
+ 		 cin>>s[k];
+		 s[k]= toupper(s[k]);
+		 ++k;
+		 printf("\n");
+ 		 printf("DURATION (weeks(W)/Months(M)/Years(Y)) : ");
+ 		 cin>>s[k];
+		 s[k]= toupper(s[k]);
+		 ++k;
+            printf("\n");
+ 		 printf("KETONUREA(P/A) : ");
+ 		 cin>>s[k];
+		 s[k]= toupper(s[k]);
+		 ++k;
+		 printf("\n");
+ 		 printf("AUTO ANTIBODIES(P/A) : ");
+ 		 cin>>s[k];
+		 s[k]= toupper(s[k]);
+		 ++k;
+		 return;
+	}
 
