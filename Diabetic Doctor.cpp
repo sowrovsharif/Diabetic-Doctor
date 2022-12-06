@@ -328,4 +328,51 @@ char display_message(int n,int m)
 	       return (ch);
 	     }
 
+int analyse_symptoms(int n)
+
+    {
+      //char s[10];
+      int i=0;
+      int count=0;
+      int result=0;
+      switch(n)
+	{
+	 case 1: if(s[9]=='D' )
+			     result=-1;
+		      else if(s[5]=='P'&& s[6]=='P' && s[7]=='H')
+			  result=-1;
+		       else
+			  {
+			    for(i=0;i<10;i++)
+			    {
+			      if(s[i]=='H'||s[i]=='P'||s[i]=='D'||s[i]=='I')
+				count++;
+			     }
+			     if(count>5)
+				result=-1;
+			  }
+		       break;
+
+	 case 2: if((s[0]=='P')||(s[1]=='P')||(s[2]=='P')||(s[3]=='H')||(s[4]=='P')||(s[5]=='P')||(s[6]=='P'))
+		     result=-1;
+		 else
+		     result=0;
+		     break;
+	 case 3: if((s[0]=='Y')&&(s[1]=='N')&&(s[2]=='W')&&(s[3]=='P')&&(s[4]=='P')||
+
+	 (s[0]=='Y')&&(s[1]=='B')&&(s[2]=='W')&&(s[3]=='P')&&(s[4]=='P')||
+
+	 (s[0]=='Y')&&(s[1]=='N')&&(s[2]=='M')&&(s[3]=='P')&&(s[4]=='P')||
+
+	 (s[0]=='Y')&&(s[1]=='N')&&(s[2]=='Y')&&(s[3]=='P')&&(s[4]=='P'))
+		  result=0;
+		else
+		   result=-1;
+		 break;
+	 default:break;
+	}
+       return(result);
+}
+
+
 
