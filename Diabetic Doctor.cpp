@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<stdio.h>
 #include<conio.h>
@@ -7,6 +8,8 @@
 #include <fstream>
 using namespace std;
 
+
+int option_one();
 void welcome_screen();
 void getvalue();
 void diagnosis();
@@ -25,17 +28,13 @@ char s[10];
 
 int main()
 	{
-
-		welcome_screen();
-
+	 all_option();
 	}
 
 
 void welcome_screen()
 	 {
 	   system("cls");
-	   int choice_input;
-
 
 	   printf("\t\t\t\t********* W E L C O M E ********* \n" );
        printf("\n\n");
@@ -48,14 +47,14 @@ void welcome_screen()
        printf("3.Search Record\t\t\t\t  4.Delete Record\n" );
        printf("\n\n");
        printf("Enter Your Choice : " );
-       cin>>choice_input;
-       printf("\n\n\n\n");
-	   printf("\t\t\t******** PRESS ANY KEY TO CONTINUE ********* \n");
+       //printf("\n\n\n\n");
+	   //printf("\t\t\t******** PRESS ANY KEY TO CONTINUE ********* \n");
 	   getch();
 	   return;
 	}
 
-void getvalue()
+
+	void getvalue()
 	{
     system("cls");
     string name,sex;
@@ -87,7 +86,8 @@ void getvalue()
 	 getch();
 	 return;
 	}
-void diagnosis(void)
+
+	void diagnosis(void)
      {
      //system("cls");
 
@@ -180,7 +180,7 @@ void getlevel1_symptoms(void)
 
     }
 
-void getlevel2_symptoms()
+    void getlevel2_symptoms()
 	       {
 
 		system("cls");
@@ -223,7 +223,8 @@ void getlevel2_symptoms()
 		  printf("\n");
 		  return;
 	      }
-void getlevel3_symptoms()
+
+	      void getlevel3_symptoms()
 	     {
 	      char   s[5];
 		 int k=0;
@@ -254,7 +255,8 @@ void getlevel3_symptoms()
 		 ++k;
 		 return;
 	}
-char display_message(int n,int m)
+
+	char display_message(int n,int m)
 
       {
        char ch;
@@ -285,7 +287,12 @@ char display_message(int n,int m)
 
 		     //  default: break;
 		      }
-		       case 2:
+
+
+
+
+
+		case 2:
 			switch(m)
 			{
 			   case 0:
@@ -327,6 +334,7 @@ char display_message(int n,int m)
 	       }
 	       return (ch);
 	     }
+
 
 int analyse_symptoms(int n)
 
@@ -434,6 +442,7 @@ int option_one(){
 	  }
 	 }
 }
+
 void show_record()
 {
 	system("cls");
@@ -466,7 +475,6 @@ void show_record()
 		file.close();
 	}
 }
-
 void search_record()
 {
 	system("cls");
@@ -520,7 +528,6 @@ void search_record()
 			cout << "\n\nPatient ID Not";
 	}
 }
-
 void delete_record()
 {
 	system("cls");
@@ -570,4 +577,6 @@ void delete_record()
 	remove("D://patientlist.txt");
 	rename("D://patientlist1.txt","D://patientlist.txt");
 }
+
+
 
