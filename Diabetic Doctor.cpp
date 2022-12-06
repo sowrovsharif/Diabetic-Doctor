@@ -10,6 +10,18 @@ using namespace std;
 void welcome_screen();
 void getvalue();
 void diagnosis();
+void getlevel1_symptoms();
+void getlevel2_symptoms();
+void getlevel3_symptoms();
+char display_message(int n,int m);
+int analyse_symptoms(int n);
+int choose();
+void all_option();
+void show_record();
+void delete_record();
+void search_record();
+
+char s[10];
 
 int main()
 	{
