@@ -285,4 +285,47 @@ char display_message(int n,int m)
 
 		     //  default: break;
 		      }
+		       case 2:
+			switch(m)
+			{
+			   case 0:
+				   printf("IT IS PRIMARY DIABETES.\n");
+ 				   printf("Proceed(Y/N)?");
+ 				   cin>>ch;
+				   break;
+
+			   case -1:
+				   printf("IT IS SECONDARY DIABETES\n");
+ 				   printf("PRESS ANY KEY TO QUIT");
+				   getch();
+				   break;
+
+				   }
+			break;
+
+		case 3:switch(m)
+		 {
+			   case 0:
+				printf(" IT IS INSULIN DEPENDENT DIABETES\n");
+ 				printf("press any key to quit");
+				getch();
+				break;
+
+
+			   case -1:
+			       printf("IT IS NON INSULIN DEPENDENT DIABETES\n");
+ 			       printf("PRESS ANY  KEY TO QUIT .");
+			       getch();
+			       break;
+
+		      //	   default: break;
+
+		 }
+
+	      // break ;
+	       //	default : break;
+	       }
+	       return (ch);
+	     }
+
 
