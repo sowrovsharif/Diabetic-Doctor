@@ -374,5 +374,29 @@ int analyse_symptoms(int n)
        return(result);
 }
 
+void all_option(){
+	welcome_screen();
+	int choice;
+	cin>>choice;
+    switch(choice){
+case 1:
+      option_one();
+	 break;
+	 case 2: 
+	 show_record();
+	 break;
+	 case 3: 
+		delete_record();
+		break;
+	case 4:
+		 search_record();
+		 break;
+
+    }
+
+
+
+}
+
 
 
