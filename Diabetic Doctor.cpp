@@ -466,3 +466,57 @@ void show_record()
 		file.close();
 	}
 }
+
+void search_record()
+{
+	system("cls");
+	fstream file;
+	int count = 0;
+	string name,sex;
+    int wt,id,p_id;
+
+
+	cout << "\n\n\t\t\t\tSearch Patient";
+
+	// Open the file in input mode
+	file.open("D://patientlist.txt", ios::in);
+	if (!file)
+		cout << "\n\nFile Opening Error!";
+	else {
+
+		cout << "\n\nPatient ID : ";
+		cin >> p_id;
+		file >> id >> name;
+		file >> wt >> sex;
+
+		while (!file.eof()) {
+
+			if (p_id == id) {
+
+				system("cls");
+
+				cout << "\n\n\t\t\t\t"
+					<< "Searching................";
+                cout<<"Found"<<endl;
+				cout << "\n\nID : "
+					<< id;
+				cout << "\nName : "
+					<< name;
+				cout << "\nWeight: "
+					<< wt;
+				cout << "\nGender: "
+					<< sex;
+				cout << endl
+					<< endl;
+				count++;
+				break;
+			}
+			file >> id >> name;
+			file >> wt >> sex;
+		}
+		system("pause");
+		file.close();
+		if (count == 0)
+			cout << "\n\nPatient ID Not";
+	}
+}
