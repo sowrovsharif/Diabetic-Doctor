@@ -398,5 +398,40 @@ case 1:
 
 }
 
-
+int option_one(){
+	char ch,choice,cho;
+	 int m;
+	 int n=1;
+	 void diagnosis(void);
+      //welcome_screen();
+	  getvalue();
+	  diagnosis();
+	 getlevel1_symptoms();
+	 m=analyse_symptoms(n);
+	 choice=display_message(m,n);
+	 choice=toupper(choice);
+	 if(choice=='Y')
+	 {
+	  ++n;
+	  getlevel2_symptoms();
+	  m=analyse_symptoms(n);
+	  choice=display_message(n,m);
+	  choice=toupper(choice);
+	  if(choice=='Y')
+	  {
+	   ++n;
+	   getlevel3_symptoms();
+	   m=analyse_symptoms(n);
+	   cho=display_message(n,m);
+	   cho=toupper(cho);
+	   if(cho=='Y')
+	   {
+	    ++n;
+	    getlevel3_symptoms();
+	    m=analyse_symptoms(n);
+	    choice=display_message(m,n);
+	   }
+	  }
+	 }
+}
 
