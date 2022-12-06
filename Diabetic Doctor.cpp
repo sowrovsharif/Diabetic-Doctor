@@ -520,3 +520,54 @@ void search_record()
 			cout << "\n\nPatient ID Not";
 	}
 }
+
+void delete_record()
+{
+	system("cls");
+	fstream file, file1;
+	int count = 0;
+	string name,sex;
+    int wt,id,p_id;
+	cout << "\n\n\t\t\t\tDelete Patient Record";
+
+	// Append file in output mode
+	file1.open("D://patientlist1.txt",
+			ios::app | ios::out);
+	file.open("D://patientlist.txt",
+			ios::in);
+
+	if (!file)
+		cout << "\n\nFile Opening Error...";
+	else {
+
+		cout << "\nPatient ID : ";
+		cin >> p_id;
+		file >> id >> name;
+		file >> wt >> sex;
+		while (!file.eof()) {
+
+			if (id == p_id) {
+
+				system("cls");
+				cout << "\n\n\t\t\t\t"
+					<< "Delete Patient Record";
+				cout << "\n\nPatient Record Deleted Successfully..\n\n";
+				count++;
+			}
+			else
+            file1 << " " << p_id<< " " << name<< " " << wt<< " " << sex<< "\n\n";
+			file >> p_id >> name;
+			file >> wt >> sex;
+		}
+		if (count == 0)
+			cout <<"Patient Not Found\n\n\n";
+	}
+	system("pause");
+
+	// Close the file
+	file.close();
+	file1.close();
+	remove("D://patientlist.txt");
+	rename("D://patientlist1.txt","D://patientlist.txt");
+}
+
