@@ -4,7 +4,6 @@
 #include<conio.h>
 #include<ctype.h>
 #include<dos.h>
-#include<process.h>
 #include <fstream>
 using namespace std;
 
